@@ -20,7 +20,7 @@ body {
   --maxlv-code-dark: #161b22;
   --maxlv-inline-code-light: #eff1f3;
   --maxlv-inline-code-dark: #262c36;
-  --file-line-width: 960px;
+  --file-line-width: 45rem;
   --line-width-adaptive: min(960px, calc(100vw - 48px));
   --font-interface-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-text-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -43,7 +43,7 @@ body {
   --h4-line-height: 1.5;
   --h5-line-height: 1.5;
   --h6-line-height: 1.5;
-  --p-spacing: 0.9rem;
+  --p-spacing: 1rem;
   --list-spacing: 0.45rem;
   --blockquote-border-color: var(--color-accent);
   --blockquote-background-color: transparent;
@@ -55,6 +55,10 @@ body {
   --embed-block-shadow-hover: none;
   --shadow-s: none;
   --shadow-l: none;
+  --radius-xs: 0;
+  --radius-s: 0;
+  --radius-m: 0;
+  --radius-l: 0;
 }
 
 .theme-light {
@@ -113,7 +117,7 @@ body {
   background-color: var(--background-primary);
   color: var(--text-normal);
   font-family: var(--font-text-theme);
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .workspace,
@@ -169,7 +173,7 @@ body {
 .markdown-source-view.mod-cm6 .inline-title,
 .markdown-source-view.mod-cm6 .cm-contentContainer,
 .markdown-source-view.mod-cm6 .cm-content {
-  max-width: 860px;
+  max-width: 45rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -181,14 +185,14 @@ body {
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > .cm-line {
-  max-width: 860px;
+  max-width: 45rem;
   margin-inline: auto !important;
 }
 
 .markdown-rendered,
 .markdown-source-view.mod-cm6 .cm-content {
   font-size: 1rem;
-  line-height: 1.72;
+  line-height: 1.5;
   color: var(--text-normal);
 }
 
@@ -266,7 +270,7 @@ a:hover,
 .markdown-rendered blockquote,
 .markdown-rendered pre {
   margin-top: 0;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .markdown-rendered ul,
@@ -295,7 +299,7 @@ a:hover,
 .markdown-rendered :not(pre) > code,
 .cm-inline-code {
   background: var(--background-secondary-alt);
-  border-radius: 0.25rem;
+  border-radius: 0;
   color: var(--color-accent);
   font-family: var(--font-monospace-theme);
   font-size: 0.875em;
@@ -313,7 +317,7 @@ a:hover,
 
 .markdown-rendered pre {
   border: 1px solid var(--background-modifier-border);
-  border-radius: 0.5rem;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -429,12 +433,12 @@ table.dataview tbody tr:hover,
 .markdown-embed,
 .file-embed {
   border: 1px solid var(--background-modifier-border);
-  border-radius: 0.5rem;
+  border-radius: 0;
 }
 
 .callout {
   border: 1px solid var(--background-modifier-border);
-  border-radius: 0.5rem;
+  border-radius: 0;
   box-shadow: none;
 }
 
