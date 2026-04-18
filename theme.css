@@ -43,8 +43,8 @@ body {
   --h4-line-height: 1.5;
   --h5-line-height: 1.5;
   --h6-line-height: 1.5;
-  --p-spacing: 1.15rem;
-  --list-spacing: 0.55rem;
+  --p-spacing: 0.9rem;
+  --list-spacing: 0.45rem;
   --blockquote-border-color: var(--color-accent);
   --blockquote-background-color: transparent;
   --table-header-background: transparent;
@@ -188,7 +188,7 @@ body {
 .markdown-rendered,
 .markdown-source-view.mod-cm6 .cm-content {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.72;
   color: var(--text-normal);
 }
 
@@ -266,7 +266,7 @@ a:hover,
 .markdown-rendered blockquote,
 .markdown-rendered pre {
   margin-top: 0;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.9rem;
 }
 
 .markdown-rendered ul,
@@ -383,7 +383,7 @@ table.dataview th,
 .dataview.table-view-table th {
   border: 0;
   border-bottom: 1px solid var(--background-modifier-border);
-  padding: 0.6em 0.8em;
+  padding: 0.42em 0.6em;
   white-space: normal;
   word-break: normal;
   overflow-wrap: anywhere;
