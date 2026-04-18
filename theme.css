@@ -12,6 +12,8 @@ body {
 	--maxlv-text-dark: #ffffff;
 	--maxlv-muted-light: #6b7280;
 	--maxlv-muted-dark: #8b949e;
+	--maxlv-sidebar-text-light: #4b5563;
+	--maxlv-sidebar-text-dark: #b7c0ca;
 	--maxlv-line-light: #e5e7eb;
 	--maxlv-line-dark: #30363d;
 	--maxlv-table-hover-light: color-mix(in srgb, #abb5c7 12%, transparent);
@@ -83,6 +85,7 @@ body {
 	--interactive-accent-hover: #4530ea;
 	--text-selection: rgba(89, 67, 254, 0.14);
 	--hr-color: var(--maxlv-line-light);
+	--maxlv-sidebar-text: var(--maxlv-sidebar-text-light);
 }
 
 .theme-dark {
@@ -103,6 +106,7 @@ body {
 	--interactive-accent-hover: #8cb2ff;
 	--text-selection: rgba(110, 158, 255, 0.2);
 	--hr-color: var(--maxlv-line-dark);
+	--maxlv-sidebar-text: var(--maxlv-sidebar-text-dark);
 }
 
 .theme-light,
@@ -142,6 +146,14 @@ body {
 .workspace-sidedock-vault-profile {
 	background: var(--background-primary);
 	border-color: var(--background-modifier-border);
+}
+
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+	--nav-item-color: var(--maxlv-sidebar-text);
+	--nav-item-color-hover: var(--text-normal);
+	--nav-item-color-active: var(--text-normal);
+	--text-muted: var(--maxlv-sidebar-text);
 }
 
 .workspace-tab-header.is-active::before,
