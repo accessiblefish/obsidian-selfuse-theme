@@ -20,7 +20,7 @@ body {
 	--maxlv-code-dark: #161b22;
 	--maxlv-inline-code-light: #eff1f3;
 	--maxlv-inline-code-dark: #262c36;
-	--file-line-width: 49rem;
+	--file-line-width: 50rem;
 	--line-width-adaptive: min(960px, calc(100vw - 48px));
 	--font-interface-theme:
 		-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -47,7 +47,8 @@ body {
 	--h5-line-height: 1.5;
 	--h6-line-height: 1.5; */
 	--p-spacing: 1rem;
-	--list-spacing: 0.45rem;
+	--list-spacing: 0rem;
+	--heading-spacing: 0rem;
 	--blockquote-border-color: var(--color-accent);
 	--blockquote-background-color: transparent;
 	--table-header-background: transparent;
@@ -181,10 +182,10 @@ body {
 	margin: 0 auto;
 }
 
-.markdown-source-view.mod-cm6 .cm-sizer,
+/* .markdown-source-view.mod-cm6 .cm-sizer,
 .markdown-source-view.mod-cm6 .inline-title {
 	padding: 3rem 20px 6rem;
-}
+} */
 
 .markdown-source-view.mod-cm6.is-readable-line-width
 	.cm-contentContainer
@@ -224,8 +225,8 @@ body {
 .inline-title,
 .markdown-rendered h1 {
 	text-align: center;
-	padding: 1em 0;
-	margin: 0;
+	padding: 0;
+	margin: 1rem 0;
 	border: 0;
 }
 
@@ -234,31 +235,8 @@ body {
 .markdown-rendered h4,
 .markdown-rendered h5,
 .markdown-rendered h6 {
-	margin-top: 2.4rem;
-	margin-bottom: 0.8rem;
-	font-weight: 700;
-}
-
-.markdown-rendered h1 a,
-.markdown-rendered h2 a,
-.markdown-rendered h3 a,
-.markdown-rendered h4 a,
-.markdown-rendered h5 a,
-.markdown-rendered h6 a {
-	color: inherit;
-	text-decoration: none;
-}
-
-.markdown-rendered h1 a:hover,
-.markdown-rendered h2 a:hover,
-.markdown-rendered h3 a:hover,
-.markdown-rendered h4 a:hover,
-.markdown-rendered h5 a:hover,
-.markdown-rendered h6 a:hover {
-	text-decoration: underline;
-	text-decoration-color: var(--color-accent);
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.25em;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 a,
@@ -279,20 +257,8 @@ a:hover,
 .markdown-rendered ol,
 .markdown-rendered blockquote,
 .markdown-rendered pre {
-	margin-top: 1;
+	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
-
-.markdown-rendered ul,
-.markdown-rendered ol {
-	padding-left: 1.5rem;
-}
-
-.markdown-preview-view ul,
-.markdown-preview-view ol,
-.markdown-source-view.mod-cm6 ul,
-.markdown-source-view.mod-cm6 ol {
-	padding-left: 1.5rem;
 }
 
 .markdown-rendered ul,
@@ -315,45 +281,14 @@ a:hover,
 	list-style: decimal;
 }
 
-.markdown-rendered li,
-.markdown-preview-view li {
-	padding-top: 0.08em;
-	padding-bottom: 0.08em;
-}
-
-.markdown-rendered li + li {
-	margin-top: 0.35rem;
-}
-
 .markdown-rendered li::marker,
 .markdown-preview-view li::marker {
 	color: var(--color-accent);
 }
 
-.markdown-rendered ul ul,
-.markdown-rendered ol ul,
-.markdown-rendered ol ol,
-.markdown-preview-view ul ul,
-.markdown-preview-view ol ul,
-.markdown-preview-view ol ol {
-	margin-top: 0.25rem;
-	margin-bottom: 0.25rem;
-}
-
-.markdown-source-view.mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-codeblock) {
-	padding-top: 0.08em;
-	padding-bottom: 0.08em;
-}
-
 .cm-s-obsidian .cm-formatting-list,
 .cm-s-obsidian .cm-hmd-list-indent {
 	color: var(--color-accent);
-}
-
-.markdown-rendered li > p,
-.markdown-preview-view li > p {
-	margin-top: 0.25rem;
-	margin-bottom: 0.25rem;
 }
 
 .markdown-rendered hr {
@@ -393,6 +328,7 @@ a:hover,
 	border: 1px solid var(--background-modifier-border);
 	border-radius: 0;
 	overflow: hidden;
+	position: relative;
 }
 
 .markdown-rendered pre code {
@@ -403,6 +339,105 @@ a:hover,
 	font-size: 0.875rem;
 	line-height: 1.5;
 	padding: 1rem;
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class*="language-"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class*="language-"]::before {
+	color: var(--text-muted);
+	content: "";
+	font-family: var(--font-text-theme);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	opacity: 0.8;
+	position: absolute;
+	right: 0.9rem;
+	text-transform: uppercase;
+	top: 0.55rem;
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-css"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-css"]::before {
+	content: "CSS";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-js"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-javascript"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-js"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-javascript"]::before {
+	content: "JS";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-ts"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-typescript"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-ts"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-typescript"]::before {
+	content: "TS";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-tsx"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-tsx"]::before {
+	content: "TSX";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-jsx"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-jsx"]::before {
+	content: "JSX";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-html"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-html"]::before {
+	content: "HTML";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-json"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-json"]::before {
+	content: "JSON";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-yaml"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-yml"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-yaml"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-yml"]::before {
+	content: "YAML";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-md"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-markdown"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-md"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-markdown"]::before {
+	content: "MD";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-bash"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-shell"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-sh"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-bash"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-shell"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-sh"]::before {
+	content: "SHELL";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-python"]::before,
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-py"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-python"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-py"]::before {
+	content: "PYTHON";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-go"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-go"]::before {
+	content: "GO";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-rust"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-rust"]::before {
+	content: "RUST";
+}
+
+body:not(.remove-language-type) .markdown-rendered pre[class~="language-sql"]::before,
+body:not(.remove-language-type) .markdown-preview-view pre[class~="language-sql"]::before {
+	content: "SQL";
 }
 
 .markdown-reading-view .markdown-preview-view .table-wrapper,
@@ -490,7 +525,7 @@ table.dataview tbody tr:hover,
 	width: 100%;
 	max-width: 100%;
 	height: auto;
-	margin: 2rem 0;
+	margin: 0;
 }
 
 .markdown-rendered .image-embed,
