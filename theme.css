@@ -6,22 +6,22 @@ Partial style(s) are adapted from Blue Topaz
 */
 
 body {
-	--maxlv-accent-light: #5943fe;
-	--maxlv-accent-dark: #6e9eff;
-	--maxlv-text-light: #333333;
-	--maxlv-text-dark: #ffffff;
-	--maxlv-muted-light: #6b7280;
-	--maxlv-muted-dark: #8b949e;
-	--maxlv-sidebar-text-light: #4b5563;
-	--maxlv-sidebar-text-dark: #b7c0ca;
-	--maxlv-line-light: #e5e7eb;
-	--maxlv-line-dark: #30363d;
-	--maxlv-table-hover-light: color-mix(in srgb, #abb5c7 12%, transparent);
-	--maxlv-table-hover-dark: color-mix(in srgb, #abb5c7 14%, transparent);
-	--maxlv-code-light: #f6f8fa;
-	--maxlv-code-dark: #161b22;
-	--maxlv-inline-code-light: #eff1f3;
-	--maxlv-inline-code-dark: #262c36;
+	--accent-light: #5943fe;
+	--accent-dark: #6e9eff;
+	--text-light: #333333;
+	--text-dark: #ffffff;
+	--muted-light: #6b7280;
+	--muted-dark: #8b949e;
+	--sidebar-text-light: #4b5563;
+	--sidebar-text-dark: #b7c0ca;
+	--line-light: #e5e7eb;
+	--line-dark: #30363d;
+	--table-hover-light: color-mix(in srgb, #abb5c7 12%, transparent);
+	--table-hover-dark: color-mix(in srgb, #abb5c7 14%, transparent);
+	--code-light: #f6f8fa;
+	--code-dark: #161b22;
+	--inline-code-light: #eff1f3;
+	--inline-code-dark: #262c36;
 	--file-line-width: 49rem;
 	--line-width-adaptive: min(960px, calc(100vw - 48px));
 	--font-interface-theme:
@@ -76,16 +76,16 @@ body {
 	--background-modifier-border-hover: #d1d5db;
 	--background-modifier-hover: rgba(171, 181, 199, 0.12);
 	--background-modifier-active-hover: rgba(171, 181, 199, 0.18);
-	--text-normal: var(--maxlv-text-light);
-	--text-muted: var(--maxlv-muted-light);
+	--text-normal: var(--text-light);
+	--text-muted: var(--muted-light);
 	--text-faint: #9ca3af;
-	--color-accent: var(--maxlv-accent-light);
+	--color-accent: var(--accent-light);
 	--color-accent-hover: #4530ea;
-	--interactive-accent: var(--maxlv-accent-light);
+	--interactive-accent: var(--accent-light);
 	--interactive-accent-hover: #4530ea;
 	--text-selection: rgba(89, 67, 254, 0.14);
-	--hr-color: var(--maxlv-line-light);
-	--maxlv-sidebar-text: var(--maxlv-sidebar-text-light);
+	--hr-color: var(--line-light);
+	--sidebar-text: var(--sidebar-text-light);
 }
 
 .theme-dark {
@@ -97,16 +97,16 @@ body {
 	--background-modifier-border-hover: #3b4552;
 	--background-modifier-hover: rgba(171, 181, 199, 0.14);
 	--background-modifier-active-hover: rgba(171, 181, 199, 0.2);
-	--text-normal: var(--maxlv-text-dark);
-	--text-muted: var(--maxlv-muted-dark);
+	--text-normal: var(--text-dark);
+	--text-muted: var(--muted-dark);
 	--text-faint: #6b7280;
-	--color-accent: var(--maxlv-accent-dark);
+	--color-accent: var(--accent-dark);
 	--color-accent-hover: #8cb2ff;
-	--interactive-accent: var(--maxlv-accent-dark);
+	--interactive-accent: var(--accent-dark);
 	--interactive-accent-hover: #8cb2ff;
 	--text-selection: rgba(110, 158, 255, 0.2);
-	--hr-color: var(--maxlv-line-dark);
-	--maxlv-sidebar-text: var(--maxlv-sidebar-text-dark);
+	--hr-color: var(--line-dark);
+	--sidebar-text: var(--sidebar-text-dark);
 }
 
 .theme-light,
@@ -150,10 +150,10 @@ body {
 
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
-	--nav-item-color: var(--maxlv-sidebar-text);
+	--nav-item-color: var(--sidebar-text);
 	--nav-item-color-hover: var(--text-normal);
 	--nav-item-color-active: var(--text-normal);
-	--text-muted: var(--maxlv-sidebar-text);
+	--text-muted: var(--sidebar-text);
 }
 
 .workspace-tab-header.is-active::before,
