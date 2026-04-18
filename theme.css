@@ -281,6 +281,16 @@ a:hover,
 	list-style: decimal;
 }
 
+.markdown-rendered ol ol,
+.markdown-preview-view ol ol {
+	list-style: lower-alpha;
+}
+
+.markdown-rendered ol ol ol,
+.markdown-preview-view ol ol ol {
+	list-style: decimal;
+}
+
 .markdown-rendered li::marker,
 .markdown-preview-view li::marker {
 	color: var(--color-accent);
@@ -649,6 +659,7 @@ table.dataview tbody tr:hover,
 }
 
 button,
+input,
 .button,
 .clickable-icon,
 .mod-cta,
