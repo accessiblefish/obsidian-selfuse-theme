@@ -378,6 +378,13 @@ a:hover,
 	padding: 1rem;
 }
 
+/* Hide CodeMirror indentation guides inside fenced code blocks only. */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indentation-marker,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indentation-marker-active,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indent::before {
+	display: none;
+}
+
 body:not(.remove-language-type)
 	.markdown-rendered
 	pre[class*="language-"]::before,
