@@ -6,7 +6,7 @@ Partial style(s) are adapted from Blue Topaz
 */
 
 body {
-	--accent-light: #5943fe;
+	--accent-light: #1b365d;
 	--accent-dark: #6e9eff;
 	--text-light: #333333;
 	--text-dark: #ffffff;
@@ -65,6 +65,7 @@ body {
 	--radius-s: 0;
 	--radius-m: 0;
 	--radius-l: 0;
+	font-weight: 500;
 }
 
 .theme-light {
@@ -218,6 +219,14 @@ body {
 	color: var(--text-normal);
 }
 
+button,
+input,
+select,
+textarea {
+	font: inherit;
+	font-weight: inherit;
+}
+
 .markdown-rendered p,
 .markdown-source-view.mod-cm6 .cm-line {
 	word-break: normal;
@@ -230,12 +239,32 @@ body {
 .HyperMD-header-1,
 .cm-header-1 {
 	font-family: var(--h1-font);
-	font-weight: 400;
-	line-height: 1.4;
+	font-weight: 500;
+}
+
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.HyperMD-header-2,
+.HyperMD-header-3,
+.HyperMD-header-4,
+.HyperMD-header-5,
+.HyperMD-header-6,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6,
+b,
+strong {
+	font-weight: 500;
 }
 
 .inline-title,
 .markdown-rendered h1 {
+	line-height: 1.4;
 	text-align: center;
 	padding: 0;
 	margin: 1rem 0;
@@ -395,7 +424,7 @@ body:not(.remove-language-type)
 	content: "";
 	font-family: var(--font-text-theme);
 	font-size: 0.78rem;
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: 0.04em;
 	opacity: 0.8;
 	position: absolute;
@@ -610,7 +639,7 @@ table.dataview th,
 .dataview.table-view-table th {
 	color: var(--text-normal);
 	font-size: 0.85rem;
-	font-weight: 600;
+	font-weight: 500;
 	text-align: left;
 	white-space: normal;
 }
@@ -702,6 +731,8 @@ input,
 .sidebar-toggle-button,
 .workspace-tab-header,
 .dropdown,
+.metadata-property,
+.metadata-add-button,
 select {
 	border-radius: 0 !important;
 }
