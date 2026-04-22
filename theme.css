@@ -562,7 +562,7 @@ body {
 	--code-comment: var(--text-muted);
 	--code-function: #d7deea;
 	--code-important: var(--color-accent-1);
-	--code-keyword: #9fbfff;
+	--code-keyword: var(--color-accent);
 	--code-operator: var(--text-normal);
 	--code-property: #d7deea;
 	--code-punctuation: #c8d0db;
@@ -790,21 +790,11 @@ textarea {
 .markdown-rendered h1 {
 	color: var(--h1-color);
 	font-family: var(--h1-font);
-	font-size: var(--h1-size);
-	font-style: var(--h1-style);
-	font-variant: var(--h1-variant);
-	font-weight: var(--h1-weight);
-	line-height: var(--h1-line-height);
+	font-weight: 500;
 }
 
 .inline-title {
-	color: var(--inline-title-color);
-	font-family: var(--inline-title-font);
-	font-size: var(--inline-title-size);
-	font-style: var(--inline-title-style);
-	font-variant: var(--inline-title-variant);
-	font-weight: var(--inline-title-weight);
-	line-height: var(--inline-title-line-height);
+	line-height: 1.4;
 	text-align: center;
 	padding: 0;
 	margin: 1rem 0;
@@ -812,6 +802,7 @@ textarea {
 }
 
 .markdown-rendered h1 {
+	line-height: 1.4;
 	text-align: center;
 	padding: 0;
 	margin: 1rem 0;
@@ -829,61 +820,29 @@ textarea {
 
 .markdown-rendered h2 {
 	color: var(--h2-color);
-	font-family: var(--h2-font);
-	font-size: var(--h2-size);
-	font-style: var(--h2-style);
-	font-variant: var(--h2-variant);
-	font-weight: var(--h2-weight);
-	line-height: var(--h2-line-height);
 }
 
 .markdown-rendered h3 {
 	color: var(--h3-color);
-	font-family: var(--h3-font);
-	font-size: var(--h3-size);
-	font-style: var(--h3-style);
-	font-variant: var(--h3-variant);
-	font-weight: var(--h3-weight);
-	line-height: var(--h3-line-height);
 }
 
 .markdown-rendered h4 {
 	color: var(--h4-color);
-	font-family: var(--h4-font);
-	font-size: var(--h4-size);
-	font-style: var(--h4-style);
-	font-variant: var(--h4-variant);
-	font-weight: var(--h4-weight);
-	line-height: var(--h4-line-height);
 }
 
 .markdown-rendered h5 {
 	color: var(--h5-color);
-	font-family: var(--h5-font);
-	font-size: var(--h5-size);
-	font-style: var(--h5-style);
-	font-variant: var(--h5-variant);
-	font-weight: var(--h5-weight);
-	line-height: var(--h5-line-height);
 }
 
 .markdown-rendered h6 {
 	color: var(--h6-color);
-	font-family: var(--h6-font);
-	font-size: var(--h6-size);
-	font-style: var(--h6-style);
-	font-variant: var(--h6-variant);
-	font-weight: var(--h6-weight);
-	line-height: var(--h6-line-height);
 }
 
 a,
 .markdown-rendered .internal-link,
 .markdown-rendered .external-link {
 	color: var(--link-color);
-	font-weight: var(--link-weight);
-	text-decoration: var(--link-decoration);
-	text-decoration-thickness: var(--link-decoration-thickness);
+	text-decoration: none;
 }
 
 a:hover,
@@ -891,28 +850,6 @@ a:hover,
 .markdown-rendered .external-link:hover {
 	color: var(--link-color-hover);
 	opacity: 0.85;
-	text-decoration: var(--link-decoration-hover);
-}
-
-.markdown-rendered .external-link,
-.cm-s-obsidian .cm-url {
-	color: var(--link-external-color);
-	text-decoration: var(--link-external-decoration);
-}
-
-.markdown-rendered .external-link:hover,
-.cm-s-obsidian .cm-url:hover {
-	color: var(--link-external-color-hover);
-	text-decoration: var(--link-external-decoration-hover);
-}
-
-.markdown-rendered .is-unresolved,
-.cm-s-obsidian .cm-hmd-internal-link.is-unresolved {
-	color: var(--link-unresolved-color);
-	filter: var(--link-unresolved-filter);
-	opacity: var(--link-unresolved-opacity);
-	text-decoration-color: var(--link-unresolved-decoration-color);
-	text-decoration-style: var(--link-unresolved-decoration-style);
 }
 
 .markdown-rendered p,
@@ -1238,14 +1175,11 @@ body:not(.remove-language-type)
 .markdown-source-view.mod-cm6 table,
 table.dataview,
 .dataview.table-view-table {
-	background: var(--table-background);
-	border-color: var(--table-border-color);
 	border-collapse: collapse;
 	display: table;
 	table-layout: auto;
-	width: 100%;
-	font-size: var(--table-text-size);
-	line-height: var(--table-line-height);
+	font-size: 0.95rem;
+	line-height: 1.5;
 }
 
 .markdown-rendered thead,
@@ -1253,8 +1187,7 @@ table.dataview,
 .markdown-source-view.mod-cm6 thead,
 table.dataview thead,
 .dataview.table-view-table thead {
-	border-bottom: var(--table-header-border-width) solid
-		var(--table-header-border-color);
+	border-bottom: 2px solid var(--text-normal);
 }
 
 .markdown-rendered th,
@@ -1262,13 +1195,11 @@ table.dataview thead,
 .markdown-source-view.mod-cm6 th,
 table.dataview th,
 .dataview.table-view-table th {
-	background: var(--table-header-background);
-	color: var(--table-header-color);
-	font-family: var(--table-header-font);
-	font-size: var(--table-header-size);
-	font-weight: var(--table-header-weight);
+	color: var(--text-normal);
+	font-size: 0.85rem;
+	font-weight: 500;
 	text-align: left;
-	white-space: var(--table-white-space);
+	white-space: normal;
 }
 
 .markdown-rendered td,
@@ -1282,14 +1213,13 @@ table.dataview th,
 .dataview.table-view-table td,
 .dataview.table-view-table th {
 	border: 0;
-	border-bottom: var(--table-border-width) solid var(--table-border-color);
-	color: var(--table-text-color);
+	border-bottom: 1px solid var(--background-modifier-border);
 	padding: 0.42em 0.6em;
-	white-space: var(--table-white-space);
+	white-space: normal;
 	word-break: normal;
 	overflow-wrap: normal;
 	hyphens: manual;
-	vertical-align: var(--table-cell-vertical-alignment);
+	vertical-align: top;
 }
 
 .markdown-rendered tbody tr:last-child td,
@@ -1340,6 +1270,12 @@ table.dataview tbody tr:hover,
 
 .cm-s-obsidian .HyperMD-header {
 	color: var(--text-normal);
+}
+
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .HyperMD-header-1,
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-header-1 {
+	font-family: var(--h1-font);
+	font-weight: 500;
 }
 
 .cm-s-obsidian .cm-link,
