@@ -27,7 +27,7 @@ body {
 		-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	--font-monospace-theme:
 		"SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-	--font-text-size: 16px;
+	--font-text-size: 1rem;
 	--font-smallest: 0.8em;
 	--font-smaller: 0.875em;
 	--font-small: 0.933em;
@@ -49,7 +49,7 @@ body {
 	--bold-weight: calc(var(--font-weight) + var(--bold-modifier));
 	--bold-color: currentColor;
 	--italic-color: currentColor;
-	--line-height-normal: 1.5;
+	--line-height-normal: 1.8;
 	--line-height-tight: 1.3;
 	--h1-font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 	--h2-font: var(--font-text-theme);
@@ -106,18 +106,18 @@ body {
 	--footnote-size: var(--font-smaller);
 	--hr-thickness: 1px;
 	--link-decoration: none;
-	--link-decoration-hover: underline;
+	--link-decoration-hover: none;
 	--link-decoration-thickness: 1px;
 	--link-external-color: var(--link-color);
 	--link-external-color-hover: var(--link-color-hover);
 	--link-external-decoration: var(--link-decoration);
 	--link-external-decoration-hover: var(--link-decoration-hover);
-	--link-unresolved-color: var(--text-muted);
+	--link-unresolved-color: var(--link-color);
 	--link-unresolved-decoration-color: currentColor;
-	--link-unresolved-decoration-style: dotted;
+	--link-unresolved-decoration-style: none;
 	--link-unresolved-filter: none;
-	--link-unresolved-opacity: 0.8;
-	--link-weight: var(--font-medium);
+	--link-unresolved-opacity: 1;
+	--link-weight: inherit;
 	--list-indent: 1.75rem;
 	--list-indent-editing: var(--list-indent);
 	--list-indent-source: var(--list-indent);
@@ -132,10 +132,10 @@ body {
 	--blockquote-border-color: var(--color-accent);
 	--blockquote-border-thickness: 5px;
 	--blockquote-background-color: transparent;
-	--blockquote-color: var(--text-muted);
+	--blockquote-color: var(--text-normal);
 	--blockquote-font-style: normal;
 	--callout-border-width: 1px;
-	--callout-border-opacity: 0.2;
+	--callout-border-opacity: 1;
 	--callout-padding: var(--size-4-3);
 	--callout-radius: var(--radius-s);
 	--callout-blend-mode: normal;
@@ -147,13 +147,13 @@ body {
 	--callout-content-background: transparent;
 	--embed-max-height: 32rem;
 	--embed-canvas-max-height: 32rem;
-	--embed-background: var(--background-primary);
+	--embed-background: transparent;
 	--embed-border-start: 1px solid var(--background-modifier-border);
-	--embed-border-end: 0;
-	--embed-border-top: 0;
-	--embed-border-bottom: 0;
-	--embed-padding: 1rem;
-	--embed-font-style: normal;
+	--embed-border-end: 1px solid var(--background-modifier-border);
+	--embed-border-top: 1px solid var(--background-modifier-border);
+	--embed-border-bottom: 1px solid var(--background-modifier-border);
+	--embed-padding: 0;
+	--embed-font-style: inherit;
 	--table-header-background: transparent;
 	--table-header-background-hover: transparent;
 	--table-row-alt-background: transparent;
@@ -162,7 +162,7 @@ body {
 	--table-cell-vertical-alignment: top;
 	--table-white-space: normal;
 	--table-header-border-width: 2px;
-	--table-header-font: var(--font-interface-theme);
+	--table-header-font: inherit;
 	--table-header-size: 0.85rem;
 	--table-header-weight: var(--font-medium);
 	--table-header-color: var(--text-normal);
@@ -1348,22 +1348,12 @@ table.dataview tbody tr:hover,
 
 .markdown-embed,
 .file-embed {
-	background: var(--embed-background);
-	border-bottom: var(--embed-border-bottom);
-	border-inline-end: var(--embed-border-end);
-	border-inline-start: var(--embed-border-start);
-	border-top: var(--embed-border-top);
-	font-style: var(--embed-font-style);
-	padding: var(--embed-padding);
+	border: 1px solid var(--background-modifier-border);
 }
 
 .callout {
-	background: var(--callout-content-background);
-	border: var(--callout-border-width) solid
-		rgba(var(--mono-rgb-100), var(--callout-border-opacity));
-	border-radius: var(--callout-radius);
+	border: 1px solid var(--background-modifier-border);
 	box-shadow: none;
-	padding: var(--callout-padding);
 }
 
 .cm-s-obsidian .HyperMD-header {
