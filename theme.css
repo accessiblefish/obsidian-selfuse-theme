@@ -218,9 +218,9 @@ body {
 	--metadata-property-radius-focus: 0;
 	--metadata-property-background: transparent;
 	--metadata-property-background-hover: transparent;
-	--metadata-property-background-active: var(--background-modifier-hover);
+	--metadata-property-background-active: transparent;
 	--metadata-label-background-hover: transparent;
-	--metadata-label-background-active: var(--background-modifier-hover);
+	--metadata-label-background-active: transparent;
 	--metadata-label-font-size: var(--font-smaller);
 	--metadata-label-font-weight: inherit;
 	--metadata-sidebar-label-font-size: var(--font-ui-smaller);
@@ -233,7 +233,7 @@ body {
 	--metadata-sidebar-input-font-size: var(--font-ui-small);
 	--metadata-input-background: transparent;
 	--metadata-input-background-hover: transparent;
-	--metadata-input-background-active: var(--background-modifier-hover);
+	--metadata-input-background-active: transparent;
 	--input-radius: 0;
 	--input-height: 2rem;
 	--input-font-weight: var(--font-normal);
@@ -787,9 +787,7 @@ textarea {
 }
 
 .inline-title,
-.markdown-rendered h1,
-.HyperMD-header-1,
-.cm-header-1 {
+.markdown-rendered h1 {
 	color: var(--h1-color);
 	font-family: var(--h1-font);
 	font-size: var(--h1-size);
@@ -829,9 +827,7 @@ textarea {
 	margin-bottom: 1rem;
 }
 
-.markdown-rendered h2,
-.HyperMD-header-2,
-.cm-header-2 {
+.markdown-rendered h2 {
 	color: var(--h2-color);
 	font-family: var(--h2-font);
 	font-size: var(--h2-size);
@@ -841,9 +837,7 @@ textarea {
 	line-height: var(--h2-line-height);
 }
 
-.markdown-rendered h3,
-.HyperMD-header-3,
-.cm-header-3 {
+.markdown-rendered h3 {
 	color: var(--h3-color);
 	font-family: var(--h3-font);
 	font-size: var(--h3-size);
@@ -853,9 +847,7 @@ textarea {
 	line-height: var(--h3-line-height);
 }
 
-.markdown-rendered h4,
-.HyperMD-header-4,
-.cm-header-4 {
+.markdown-rendered h4 {
 	color: var(--h4-color);
 	font-family: var(--h4-font);
 	font-size: var(--h4-size);
@@ -865,9 +857,7 @@ textarea {
 	line-height: var(--h4-line-height);
 }
 
-.markdown-rendered h5,
-.HyperMD-header-5,
-.cm-header-5 {
+.markdown-rendered h5 {
 	color: var(--h5-color);
 	font-family: var(--h5-font);
 	font-size: var(--h5-size);
@@ -877,9 +867,7 @@ textarea {
 	line-height: var(--h5-line-height);
 }
 
-.markdown-rendered h6,
-.HyperMD-header-6,
-.cm-header-6 {
+.markdown-rendered h6 {
 	color: var(--h6-color);
 	font-family: var(--h6-font);
 	font-size: var(--h6-size);
@@ -1352,10 +1340,6 @@ table.dataview tbody tr:hover,
 
 .cm-s-obsidian .HyperMD-header {
 	color: var(--text-normal);
-}
-
-.cm-s-obsidian .cm-formatting-header {
-	color: var(--heading-formatting);
 }
 
 .cm-s-obsidian .cm-link,
