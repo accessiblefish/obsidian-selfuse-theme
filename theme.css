@@ -1282,6 +1282,14 @@ table.dataview tbody tr:hover,
 	align-items: flex-start;
 }
 
+input.metadata-property-key-input {
+	box-sizing: border-box;
+	height: auto;
+	min-height: var(--metadata-input-height);
+	padding: var(--size-4-1);
+	align-self: flex-start;
+}
+
 .cm-s-obsidian .HyperMD-header {
 	color: var(--text-normal);
 }
