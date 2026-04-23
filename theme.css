@@ -1272,7 +1272,14 @@ table.dataview tbody tr:hover,
 .metadata-property-key-input {
 	min-height: var(--metadata-input-height);
 	display: flex;
+}
+
+.metadata-property-key {
 	align-items: center;
+}
+
+.metadata-property-key-input {
+	align-items: flex-start;
 }
 
 .cm-s-obsidian .HyperMD-header {
