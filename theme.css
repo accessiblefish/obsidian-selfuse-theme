@@ -207,7 +207,7 @@ body {
 	--metadata-border-color: var(--background-modifier-border);
 	--metadata-border-radius: 0;
 	--metadata-border-width: 0;
-	--metadata-gap: 3px;
+	--metadata-gap: 0px;
 	--metadata-divider-color: var(--background-modifier-border);
 	--metadata-divider-color-hover: transparent;
 	--metadata-divider-color-focus: transparent;
@@ -230,6 +230,7 @@ body {
 	--metadata-input-height: calc(var(--font-text-size) * 1.75);
 	--metadata-input-text-color: var(--text-normal);
 	--metadata-input-font-size: var(--font-small);
+	--metadata-input-padding: 0 var(--size-4-1);
 	--metadata-sidebar-input-font-size: var(--font-ui-small);
 	--metadata-input-background: transparent;
 	--metadata-input-background-hover: transparent;
@@ -1274,15 +1275,7 @@ table.dataview tbody tr:hover,
 	display: flex;
 }
 
-.metadata-property-key {
-	align-items: flex-start;
-}
-
-input.metadata-property-key-input {
-	box-sizing: border-box;
-	height: auto;
-	min-height: var(--metadata-input-height);
-	padding: var(--size-4-1);
+div.metadata-property-key {
 	align-self: flex-start;
 }
 
@@ -1290,7 +1283,9 @@ input.metadata-property-key-input {
 	color: var(--text-normal);
 }
 
-.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .HyperMD-header-1,
+.markdown-source-view.mod-cm6
+	.cm-line:not(.HyperMD-codeblock)
+	.HyperMD-header-1,
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-header-1 {
 	font-family: var(--h1-font);
 	font-weight: 500;
