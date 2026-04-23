@@ -1275,10 +1275,6 @@ table.dataview tbody tr:hover,
 }
 
 .metadata-property-key {
-	align-items: center;
-}
-
-.metadata-property-key-input {
 	align-items: flex-start;
 }
 
