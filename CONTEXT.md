@@ -17,7 +17,7 @@ Deep teal (`#294342`) identifies primary interactive states such as buttons and 
 _Avoid_: Gold primary interaction, teal links
 
 **Link appearance**:
-Links use a dedicated muted steel blue (`#6E83A8` light, `#A5B6DE` dark) instead of the teal interaction primary. Internal links are wrapped in literal `[[ ]]` brackets and have no underline; unresolved internal links use the same blue at reduced opacity; external links keep an underline offset slightly below the text. Hover only darkens the blue, never changes weight or underline thickness.
+Links use a dedicated muted steel blue (`#6E83A8` light, `#A5B6DE` dark) instead of the teal interaction primary. Internal links are wrapped in literal `[[ ]]` brackets and have no underline; unresolved internal links use the same blue at reduced opacity; external links keep an underline offset slightly below the text. Internal link hover replaces the underline with a darkened background that also covers the brackets; external link hover only darkens the blue. Hover never changes weight or underline thickness.
 _Avoid_: Teal links, underlined internal links, hover bolding
 
 **Heading hierarchy**:
