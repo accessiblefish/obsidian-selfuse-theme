@@ -13,8 +13,12 @@ The light palette applies to both document surfaces and the surrounding Obsidian
 _Avoid_: Editor-only palette, reading-only palette
 
 **Interaction primary**:
-Deep teal (`#294342`) identifies links and primary interactive states. Old gold is reserved for compact emphasis such as list markers, progress, and decorative rules.
-_Avoid_: Gold primary interaction
+Deep teal (`#294342`) identifies primary interactive states such as buttons and selections, but not links. Old gold is reserved for compact emphasis such as list markers, progress, and decorative rules.
+_Avoid_: Gold primary interaction, teal links
+
+**Link appearance**:
+Links use a dedicated muted steel blue (`#6E83A8` light, `#A5B6DE` dark) instead of the teal interaction primary. Internal links are wrapped in literal `[[ ]]` brackets and have no underline; unresolved internal links use the same blue at reduced opacity; external links keep an underline offset slightly below the text. Hover only darkens the blue, never changes weight or underline thickness.
+_Avoid_: Teal links, underlined internal links, hover bolding
 
 **Heading hierarchy**:
 Headings use scale, weight, and deep teal without default full-width divider lines.
