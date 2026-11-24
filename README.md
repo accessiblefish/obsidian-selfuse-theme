@@ -4,15 +4,16 @@ This theme was built using code from Things theme.
 
 ## 在其他电脑上使用
 
-仓库自带 `install.sh`，克隆后一条命令即可装到任意 Obsidian 库：
+仓库自带 `install.sh`。克隆后用编辑器打开脚本，在顶部 `VAULT_PATHS` 里填入你的库路径（可填多个），保存后直接运行：
 
 ```bash
 git clone git@github.com:accessiblefish/obsidian-selfuse-theme.git
 cd obsidian-selfuse-theme
-./install.sh /path/to/你的库            # 可跟多个库路径
+# 编辑 install.sh, 在 VAULT_PATHS 中填入库路径
+./install.sh
 ```
 
-默认用符号链接安装，之后在仓库目录里 `git pull` 更新主题，所有库自动生效，无需重新安装。Windows 或不想依赖仓库位置时用 `./install.sh --copy ...` 改为复制文件（更新需重跑一次）。
+默认复制 `theme.css` / `manifest.json` 到每个库的 `.obsidian/themes/Things/` 下，与仓库位置脱钩（更新主题后重跑一次即可）。也可以用 `./install.sh --link <库路径>` 临时改为符号链接安装，之后 `git pull` 更新自动生效。
 
 安装后在 Obsidian 中启用：**设置 → 外观 → 主题 → Things**。
 
