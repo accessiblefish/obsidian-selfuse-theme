@@ -13,7 +13,7 @@ cd obsidian-selfuse-theme
 ./install.sh
 ```
 
-默认复制 `theme.css` / `manifest.json` 到每个库的 `.obsidian/themes/Things/` 下，与仓库位置脱钩（更新主题后重跑一次即可）。也可以用 `./install.sh --link <库路径>` 临时改为符号链接安装，之后 `git pull` 更新自动生效。
+默认把 `theme.css` / `manifest.json` 复制到每个库的 `.obsidian/themes/Things/` 下，与仓库位置脱钩（更新主题后重跑一次即可）。只能通过脚本里指定的路径安装，不支持命令行传参。
 
 安装后在 Obsidian 中启用：**设置 → 外观 → 主题 → Things**。
 
