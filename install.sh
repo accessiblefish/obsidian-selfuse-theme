@@ -11,7 +11,7 @@ VAULT_PATHS=(
 )
 # ==============================================================
 
-THEME_NAME="Things"
+THEME_NAME="Tuse"
 SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [[ ${#VAULT_PATHS[@]} -eq 0 ]]; then
