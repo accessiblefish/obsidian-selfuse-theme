@@ -611,6 +611,12 @@ img {
     background: var(--color-accent);
 }
 
+/* Editor line numbers */
+.markdown-source-view.mod-cm6 .cm-lineNumbers .cm-gutterElement {
+    box-sizing: content-box;
+    min-width: 2ch;
+}
+
 /* Focus active line */
 body.active-line .cm-active:not(.HyperMD-header, .HyperMD-codeblock)::before,
 body.active-line .cm-active.HyperMD-quote::before {
